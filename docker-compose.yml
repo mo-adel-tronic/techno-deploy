@@ -47,3 +47,4 @@ networks:
 volumes:
   certbot-etc:
   certbot-web:
+  webroot:
