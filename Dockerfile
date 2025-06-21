@@ -10,9 +10,8 @@ COPY . .
 # Install dependencies using npm ci for a clean installation
 RUN npm ci
 
-RUN npm run build
 # Expose the port the application listens on
 EXPOSE 3000
 
 # Define the command to start the application
-CMD [ "npm", "start" ]
+CMD [ "node", ".next/standalone/server.js" ]
