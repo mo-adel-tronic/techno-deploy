@@ -10,6 +10,7 @@ COPY . .
 # Install dependencies using npm ci for a clean installation
 RUN npm ci
 
+RUN npm run build
 # Expose the port the application listens on
 EXPOSE 3000
 

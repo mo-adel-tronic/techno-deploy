@@ -5,6 +5,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+        - NEXT_TELEMETRY_DISABLED=1
+    container_name: technotorial
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
     ports:
       - "3000:3000"
     networks:
